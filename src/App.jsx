@@ -1,24 +1,24 @@
-import {useState} from 'react'
-import Count from "./count"
-import Sample from "./component/Sample"
- 
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import Dashboard from "./pages/Dashboard"
+import Login from "./pages/Login"
+import Register from "./pages/Register"
+import PageNotFound from "./pages/PageNotFound"
 
 
 function App() {
-  const myName="Pragathi"
-  const Age="19"
-  const[count,setCount] =useState(0)
+  
   
   return (
     <>
-    <h1>
-      My React App
-    </h1>
-    <h1 className="text-3x1 font-bold underline text-green-600">Hello world</h1>
-    
-    <Count count={count} setCount={setCount}/>
-
-    </>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="*" element={<PageNotFound />} />
+      </Routes>
+      </BrowserRouter>
+    </> 
   )
 }
 export default App
