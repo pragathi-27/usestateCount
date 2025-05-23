@@ -12,8 +12,8 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/Login" element={<Login />} />
+      <Route path="/Dashboard" element={<Dashboard />} />
+      <Route path="/" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="*" element={<PageNotFound />} />
       </Routes>
